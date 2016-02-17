@@ -1,0 +1,12 @@
+<h1>Register Customer</h1>
+<div ng-controller="CustomerController">
+<form>
+  First Name: <input ng-model="customer.firstName" />
+  Last Name: <input ng-model="customer.lastName" />
+  Phone Number: <input ng-model="customer.phoneNumber" />
+  Email: <input ng-model="customer.email" />
+
+	<button ng-click="registerCustomer()">Register!</button>
+
+</form>
+</div>

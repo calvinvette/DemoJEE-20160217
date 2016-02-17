@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h1>Register Customer</h1>
+<h:form>
+  First Name: <h:inputText value="#{customerManagedBean.customer.firstName}" />
+  Last Name: <h:inputText value="#{customerManagedBean.customer.lastName}" />
+  Phone Number: <h:inputText value="#{customerManagedBean.customer.phoneNumber}" />
+  Email: <h:inputText value="#{customerManagedBean.customer.email}" />
+
+
+
+	<h:commandButton onclick="#{customerManagedBean.registerCustomer()}" value="Register!"/>
+
+</h:form>
+
+</html>

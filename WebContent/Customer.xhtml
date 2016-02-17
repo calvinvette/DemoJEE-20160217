@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+<h:messages />
+
+<h:form>
+  Find By Last Name: <h:inputText value="#{customerManagedBean.customer.lastName}">
+  	<f:validateBean disabled="true"/>
+  </h:inputText>
+	<h:commandButton action="#{customerManagedBean.findByLastName}" value="Find!"/>
+<br/>
+  Find By ID: <h:inputText value="#{customerManagedBean.customer.customerId}" />
+	<h:commandButton action="#{customerManagedBean.findById}" value="Find!"/>
+<br/>
+Customer:
+#{customerManagedBean.customer.customerId} <br/>
+#{customerManagedBean.customer.firstName} <br/>
+#{customerManagedBean.customer.lastName}<br/>
+#{customerManagedBean.customer.phoneNumber}<br/>
+#{customerManagedBean.customer.email}<br/>
+
+<h1>Customers</h1>
+
+<h:dataTable value="#{customerManagedBean.customers}" var="cust">
+	<h:column>#{cust.customerId}</h:column>
+	<h:column>#{cust.firstName}</h:column>
+	<h:column>#{cust.lastName}</h:column>
+	<h:column>#{cust.phoneNumber}</h:column>
+	<h:column>#{cust.email}</h:column>
+</h:dataTable>
+
+</h:form>
+
+</html>

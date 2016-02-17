@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"> 
+
+<h:head></h:head> 
+<body> 
+
+<h1>Customers</h1>
+
+<h:dataTable value="#{customerManagedBean.customers}" var="cust">
+	<h:column>#{cust.customerId}</h:column>
+	<h:column>#{cust.firstName}</h:column>
+	<h:column>#{cust.lastName}</h:column>
+	<h:column>#{cust.phoneNumber}</h:column>
+	<h:column>#{cust.email}</h:column>
+</h:dataTable>
+
+</body> 
+</html>

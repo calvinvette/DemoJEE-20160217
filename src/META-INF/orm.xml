@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence/orm http://xmlns.jcp.org/xml/ns/persistence/orm_2_1.xsd">
+
+	<named-query name="Customer.FIND_BY_LAST_NAME">
+		<query>
+			<![CDATA[
+				select c from Customer c where c.lastName = :lastName order by c.firstName, c.lastName
+			]]>
+		</query>
+	</named-query>
+	<!-- 
+	<named-native-query name="Customer.FIND_BY_LAST_NAME">
+		<query>
+			<![CDATA[
+				call sp_findCustByLastName(:lastName)
+			]]>
+		</query>
+	</named-native-query>
+	-->
+</entity-mappings>
